@@ -2,18 +2,27 @@
 // custom fields I want to use
 ?>
 <div class="floating-squares-container">
-    <div class="square content-square">
-        <h3>Amazing Veils on sale</h3>
-        <p>Corned beef t-bone turducken pork belly. Ribeye salami chicken chuck drumstick chislic, sausage cow pork jerky bresaola porchetta filet mignon. Meatloaf biltong turkey boudin pork belly. Salami venison pork chop, rump pork loin bacon cupim kevin strip steak pork belly.</p>
+    <div class="basic">
+        <div class="square content-square">
+            <h3>Amazing Veils on sale</h3>
+            <p>Corned beef t-bone turducken pork belly. Ribeye salami chicken chuck drumstick chislic, sausage cow pork jerky bresaola porchetta filet mignon. Meatloaf biltong turkey boudin pork belly. Salami venison pork chop, rump pork loin bacon cupim kevin strip steak pork belly.</p>
+        </div>
     </div>
     <div class="square main-image-container">
         <img class="main-image" src="https://wallpapers.com/images/high/iron-man-minimalist-art-vjaph0urzrosn7a5.jpg" alt="" />
     </div>
-    <div class="square hidden-on-mobile"></div>
-    <div class="square hidden-on-mobile"></div>
+    <div class="right-floating-squares">
+        <div class="square hidden-on-mobile"></div>
+        <div class="square hidden-on-mobile"></div>
+    </div>
 </div>
 <style>
     /* // Floating Squares styles */
+    .basic {
+        height: auto;
+        width: 100%;
+    }
+
     .floating-squares-container {
         display: flex;
         flex-direction: column;
@@ -48,6 +57,9 @@
         padding: 32px;
         color: #666666;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .content-square h3 {
@@ -71,13 +83,44 @@
 
     @media only screen and (min-width: 320px) {}
 
-    @media only screen and (min-width: 768px) {
+    @media(min-width: 768px) {
         .hidden-on-mobile {
             display: block;
         }
+
+        .floating-squares-container {
+            position: relative;
+            flex-direction: row;
+        }
+
+        .square {
+            height: 50%;
+        }
+
+        .square.main-image-container {
+            height: 400px;
+        }
+
+        .square.content-square {
+            height: 100%;
+        }
+
+        .right-floating-squares {
+            display: flex;
+            flex-direction: column;
+            width: 75%;
+        }
+
+        .content-square h3 {
+            font-size: 24px;
+        }
     }
 
-    @media only screen and (min-width: 1024px) {}
+    @media only screen and (min-width: 1024px) {
+        .content-square h3 {
+            font-size: 32px;
+        }
+    }
 
     @media only screen and (min-width: 1200px) {}
 </style>
