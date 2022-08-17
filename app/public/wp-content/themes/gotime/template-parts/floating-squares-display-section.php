@@ -6,7 +6,7 @@
         <div class="square content-square">
             <h3>Amazing Veils on sale</h3>
             <p>Corned beef t-bone turducken pork belly. Ribeye salami chicken chuck drumstick chislic, sausage cow pork jerky bresaola porchetta filet mignon. Meatloaf biltong turkey boudin pork belly. Salami venison pork chop, rump pork loin bacon cupim kevin strip steak pork belly.</p>
-            <div class="overflow-square-button"><a href="">Shop Now</a></div>
+            <div class="floating-squares-button"><a href="">Shop Now</a></div>
         </div>
     </div>
     <div class="square main-image-container">
@@ -28,8 +28,17 @@
         width: 100%;
     }
 
-    .overflow-square-button {
+    .floating-squares-button {
+        padding: 10px 24px 10px 24px;
+        background-color: #262626;
+        transition: ease all 0.3s;
+        cursor: pointer;
         display: inline-block;
+        transition: ease all 0.25s;
+    }
+
+    .floating-squares-button a {
+        color: #fff;
     }
 
     .floating-squares-container {
