@@ -1,12 +1,17 @@
 <?php
 // custom fields I want to use
 ?>
-<div class="overflow-squares-container">
+<div class="overflow-squares-container overflow-squares-max-w">
     <div class="overflow-square-left"></div>
     <div class="overflow-square-center"></div>
     <div class="overflow-square-right"></div>
 </div>
 <style>
+    .overflow-squares-max-w {
+        margin: auto;
+        max-width: 1560px;
+    }
+
     .overflow-squares-container {
         padding-top: 50px;
         width: 100%;
@@ -43,7 +48,7 @@
 
         .overflow-square-left {
             position: absolute;
-            width: 450px;
+            width: 475px;
             height: 350px;
             z-index: 10;
             left: 5%;
@@ -71,7 +76,30 @@
         }
     }
 
+    @media(min-width: 992px) {
+        .overflow-square-left {
+            width: 550px;
+            height: 400px;
+        }
+
+        .overflow-square-center {
+            height: 250px;
+            bottom: -5%;
+        }
+
+        .overflow-square-right {
+            width: 475px;
+            height: 600px;
+            right: 5%;
+        }
+    }
+
     @media(min-width: 1024px) {}
 
-    @media(min-width: 1200px) {}
+    @media(min-width: 1200px) {
+        .overflow-square-right {
+            width: 800px;
+            right: -5%;
+        }
+    }
 </style>
