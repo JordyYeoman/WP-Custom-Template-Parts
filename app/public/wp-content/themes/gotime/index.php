@@ -7,4 +7,6 @@
     <?php get_template_part('template-parts/floating-squares-display-section'); ?>
     <h3 style="font-size: 32px; font-weight: bold; text-align: center;">Overflow Squares</h3>
     <?php get_template_part('template-parts/overflow-squares-section'); ?>
+    <h3 style="font-size: 32px; font-weight: bold; text-align: center;">Sales Squares</h3>
+    <?php get_template_part('template-parts/sales-square-section'); ?>
 </div>

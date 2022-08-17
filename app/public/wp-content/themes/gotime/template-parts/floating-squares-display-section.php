@@ -6,14 +6,19 @@
         <div class="square content-square">
             <h3>Amazing Veils on sale</h3>
             <p>Corned beef t-bone turducken pork belly. Ribeye salami chicken chuck drumstick chislic, sausage cow pork jerky bresaola porchetta filet mignon. Meatloaf biltong turkey boudin pork belly. Salami venison pork chop, rump pork loin bacon cupim kevin strip steak pork belly.</p>
+            <div class="overflow-square-button"><a href="">Shop Now</a></div>
         </div>
     </div>
     <div class="square main-image-container">
         <img class="main-image" src="https://wallpapers.com/images/high/iron-man-minimalist-art-vjaph0urzrosn7a5.jpg" alt="" />
     </div>
     <div class="right-floating-squares">
-        <div class="square hidden-on-mobile"></div>
-        <div class="square hidden-on-mobile"></div>
+        <div class="square hidden-on-mobile">
+            <img class="secondary-image" src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+        </div>
+        <div class="square hidden-on-mobile">
+            <img class="secondary-image" src="https://images.pexels.com/photos/1476321/pexels-photo-1476321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+        </div>
     </div>
 </div>
 <style>
@@ -23,15 +28,19 @@
         width: 100%;
     }
 
+    .overflow-square-button {
+        display: inline-block;
+    }
+
     .floating-squares-container {
         display: flex;
         flex-direction: column;
-        background-color: lightgreen;
+        background-color: #ffb6c130;
         transition: ease all 0.3s;
     }
 
     .square {
-        background-color: #2eb1e4;
+        background-color: #ffb6c130;
         min-width: 100px;
         min-height: 100px;
         width: 100%;
@@ -39,6 +48,13 @@
         border: 1px solid white;
         transition: ease all 0.3s;
         box-sizing: border-box;
+    }
+
+    .square .secondary-image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 
     .square.main-image-container {
@@ -74,7 +90,7 @@
     }
 
     .square:hover {
-        transform: scale(0.9);
+        transform: scale(0.99);
     }
 
     .hidden-on-mobile {
@@ -90,6 +106,7 @@
 
         .floating-squares-container {
             position: relative;
+            height: 500px;
             flex-direction: row;
         }
 
@@ -98,7 +115,7 @@
         }
 
         .square.main-image-container {
-            height: 400px;
+            /* height: 400px; */
         }
 
         .square.content-square {
@@ -109,6 +126,7 @@
             display: flex;
             flex-direction: column;
             width: 75%;
+            height: 100%;
         }
 
         .content-square h3 {
