@@ -1,23 +1,28 @@
 <?php
-// custom fields I want to use
+$floating_squares_main_heading_text = get_field('floating_squares_main_heading_text');
+$floating_squares_main_paragraph_text = get_field('floating_squares_main_paragraph_text');
+$floating_squares_shop_link = get_field('floating_squares_shop_link');
+$floating_squares_main_feature_image = get_field('floating_squares_main_feature_image');
+$floating_squares_small_top_right_image = get_field('floating_squares_small_top_right_image');
+$floating_squares_small_bottom_right_image_copy = get_field('floating_squares_small_bottom_right_image_copy');
 ?>
 <div class="floating-squares-container">
     <div class="basic">
         <div class="square content-square">
-            <h3>Amazing Veils on sale</h3>
-            <p>Corned beef t-bone turducken pork belly. Ribeye salami chicken chuck drumstick chislic, sausage cow pork jerky bresaola porchetta filet mignon. Meatloaf biltong turkey boudin pork belly. Salami venison pork chop, rump pork loin bacon cupim kevin strip steak pork belly.</p>
-            <div class="floating-squares-button"><a href="">Shop Now</a></div>
+            <h3><?php echo $floating_squares_main_heading_text; ?></h3>
+            <p><?php echo $floating_squares_main_paragraph_text; ?></p>
+            <div class="floating-squares-button"><a href="<?php echo $floating_squares_shop_link; ?>">Shop Now</a></div>
         </div>
     </div>
     <div class="square main-image-container">
-        <img class="main-image" src="https://wallpapers.com/images/high/iron-man-minimalist-art-vjaph0urzrosn7a5.jpg" alt="" />
+        <img class="main-image" src="<?php echo $floating_squares_main_feature_image; ?>" alt="" />
     </div>
     <div class="right-floating-squares">
         <div class="square hidden-on-mobile">
-            <img class="secondary-image" src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+            <img class="secondary-image" src="<?php echo $floating_squares_small_top_right_image; ?>" alt="" />
         </div>
         <div class="square hidden-on-mobile">
-            <img class="secondary-image" src="https://images.pexels.com/photos/1476321/pexels-photo-1476321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+            <img class="secondary-image" src="<?php echo $floating_squares_small_bottom_right_image_copy; ?>" alt="" />
         </div>
     </div>
 </div>
