@@ -1,14 +1,17 @@
 <?php
-// custom fields I want to use
+$sales_square_section_feature_image = get_field('sales_square_section_feature_image');
+$sales_square_section_main_title = get_field('sales_square_section_main_title');
+$sales_square_section_body_text = get_field('sales_square_section_body_text');
+$sales_square_shop_link = get_field('sales_square_shop_link');
 ?>
 <div class="sales-square">
     <div class="sales-square-main-image-container">
-        <img class="sales-square-img" src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+        <img class="sales-square-img" src="<?php echo $sales_square_section_feature_image; ?>" alt="" />
     </div>
     <div class="sales-square-content">
-        <h3>Checkout our deals</h3>
-        <p>Corned beef t-bone turducken pork belly. Ribeye salami chicken chuck drumstick chislic, sausage cow pork jerky bresaola porchetta filet mignon. Meatloaf biltong turkey boudin pork belly. Salami venison pork chop, rump pork loin bacon cupim kevin strip steak pork belly.</p>
-        <div class="sales-square-button"><a href="">Shop Now</a></div>
+        <h3><?php echo $sales_square_section_main_title; ?></h3>
+        <p><?php echo $sales_square_section_body_text; ?></p>
+        <div class="sales-square-button"><a href="<?php echo $sales_square_shop_link; ?>">Shop Now</a></div>
     </div>
 </div>
 <style>
