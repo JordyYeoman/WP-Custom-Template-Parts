@@ -3,8 +3,11 @@ $sales_square_section_feature_image = get_field('sales_square_section_feature_im
 $sales_square_section_main_title = get_field('sales_square_section_main_title');
 $sales_square_section_body_text = get_field('sales_square_section_body_text');
 $sales_square_shop_link = get_field('sales_square_shop_link');
+$sales_square_display = get_field('sales_square_display');
 ?>
-<div class="sales-square">
+<div data-should-display-section="<?php echo $sales_square_display; ?>" class="sales-square" style="<?php if (!$sales_square_display) {
+                                                                                                        echo 'display:none;';
+                                                                                                    }; ?>">
     <div class="sales-square-main-image-container">
         <img class="sales-square-img" src="<?php echo $sales_square_section_feature_image; ?>" alt="" />
     </div>
@@ -17,7 +20,7 @@ $sales_square_shop_link = get_field('sales_square_shop_link');
 <style>
     .sales-square {
         box-sizing: border-box;
-        background-color: #ffb6c130;
+        /* background-color: #ffb6c130; */
         width: 100%;
         height: 450px;
     }

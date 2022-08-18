@@ -1,0 +1,27 @@
+[18-Aug-2022 12:40:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_field() in /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-content/themes/gotime/template-parts/floating-squares-display-section.php:2
+Stack trace:
+#0 /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-includes/template.php(772): require()
+#1 /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-includes/template.php(716): load_template('/Users/jordyyeo...', false, Array)
+#2 /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-content/themes/gotime/index.php(7): get_template_part('template-parts/...')
+#4 /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-includes/template-loader.php(106): include('/Users/jordyyeo...')
+#5 /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-blog-header.php(19): require_once('/Users/jordyyeo...')
+#6 /Users/jordyyeoman/Local Sites/templateparts/app/pu in /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-content/themes/gotime/template-parts/floating-squares-display-section.php on line 2
+[18-Aug-2022 12:40:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_field() in /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-content/themes/gotime/template-parts/floating-squares-display-section.php:2
+Stack trace:
+#0 /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-includes/template.php(772): require()
+#1 /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-includes/template.php(716): load_template('/Users/jordyyeo...', false, Array)
+#2 /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-content/themes/gotime/index.php(7): get_template_part('template-parts/...')
+#4 /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-includes/template-loader.php(106): include('/Users/jordyyeo...')
+#5 /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-blog-header.php(19): require_once('/Users/jordyyeo...')
+#6 /Users/jordyyeoman/Local Sites/templateparts/app/pu in /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-content/themes/gotime/template-parts/floating-squares-display-section.php on line 2
+[18-Aug-2022 12:41:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_field() in /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-content/themes/gotime/template-parts/floating-squares-display-section.php:2
+Stack trace:
+#0 /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-includes/template.php(772): require()
+#1 /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-includes/template.php(716): load_template('/Users/jordyyeo...', false, Array)
+#2 /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-content/themes/gotime/index.php(7): get_template_part('template-parts/...')
+#4 /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-includes/template-loader.php(106): include('/Users/jordyyeo...')
+#5 /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-blog-header.php(19): require_once('/Users/jordyyeo...')
+#6 /Users/jordyyeoman/Local Sites/templateparts/app/pu in /Users/jordyyeoman/Local Sites/templateparts/app/public/wp-content/themes/gotime/template-parts/floating-squares-display-section.php on line 2

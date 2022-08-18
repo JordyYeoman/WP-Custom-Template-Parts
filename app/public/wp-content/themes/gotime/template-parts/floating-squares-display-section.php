@@ -5,8 +5,11 @@ $floating_squares_shop_link = get_field('floating_squares_shop_link');
 $floating_squares_main_feature_image = get_field('floating_squares_main_feature_image');
 $floating_squares_small_top_right_image = get_field('floating_squares_small_top_right_image');
 $floating_squares_small_bottom_right_image = get_field('floating_squares_small_bottom_right_image');
+$floating_squares_display = get_field('floating_squares_display');
 ?>
-<div class="floating-squares-container">
+<div data-should-display-section="<?php echo $floating_squares_display; ?>" class="floating-squares-container" style="<?php if (!$floating_squares_display) {
+                                                                                                                            echo 'display:none;';
+                                                                                                                        }; ?>">
     <div class="basic">
         <div class="square content-square">
             <h3><?php echo $floating_squares_main_heading_text; ?></h3>
@@ -40,10 +43,21 @@ $floating_squares_small_bottom_right_image = get_field('floating_squares_small_b
         cursor: pointer;
         display: inline-block;
         transition: ease all 0.25s;
+        max-width: 250px;
+        margin: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .floating-squares-button:hover {
+        opacity: 0.9
     }
 
     .floating-squares-button a {
         color: #fff;
+        display: block;
+        width: 100%;
+        height: 100%;
     }
 
     .floating-squares-container {
@@ -95,12 +109,16 @@ $floating_squares_small_bottom_right_image = get_field('floating_squares_small_b
     .content-square h3 {
         font-weight: bold;
         font-size: 26px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .content-square p {
         line-height: 16px;
         font-size: 15px;
         transition: ease all 0.3s;
+        margin: 10px;
+        margin-bottom: 40px;
     }
 
     .square:hover {

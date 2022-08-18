@@ -1,21 +1,28 @@
 <?php
-// custom fields I want to use
+$overflow_squares_main_heading_text = get_field('overflow_squares_main_heading_text');
+$overflow_squares_main_paragraph_text = get_field('overflow_squares_main_paragraph_text');
+$overflow_squares_shop_link = get_field('overflow_squares_shop_link');
+$overflow_squares_display = get_field('overflow_squares_display');
+$overflow_squares_left_image = get_field('overflow_squares_left_image');
+$overflow_squares_right_image = get_field('overflow_squares_right_image');
 ?>
-<div class="overflow-squares-container overflow-squares-max-w">
+<div data-should-display-section="<?php echo $overflow_squares_display; ?>" class="overflow-squares-container overflow-squares-max-w" style="<?php if (!$overflow_squares_display) {
+                                                                                                                                                    echo 'display:none;';
+                                                                                                                                                }; ?>">
     <div class="overflow-square-left">
         <div class="overflow-square-relative">
-            <img class="overflow-square-img" src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+            <img class="overflow-square-img" src="<?php echo $overflow_squares_left_image; ?>" alt="" />
         </div>
     </div>
     <div class="overflow-square-bg"></div>
     <div class="overflow-square-center">
-        <h3>Amazing Veils on sale</h3>
-        <p>Corned beef t-bone turducken pork belly. Ribeye salami chicken chuck drumstick chislic, sausage cow pork jerky bresaola porchetta filet mignon. Meatloaf biltong turkey boudin pork belly. Salami venison pork chop, rump pork loin bacon cupim kevin strip steak pork belly.</p>
-        <div class="overflow-square-button"><a href="">Shop Now</a></div>
+        <h3><?php echo $overflow_squares_main_heading_text; ?></h3>
+        <p><?php echo $overflow_squares_main_paragraph_text; ?></p>
+        <div class="overflow-square-button"><a href="<?php echo $overflow_squares_shop_link; ?>">Shop Now</a></div>
     </div>
     <div class="overflow-square-right">
         <div class="overflow-square-relative">
-            <img class="overflow-square-img" src="https://images.pexels.com/photos/3568520/pexels-photo-3568520.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+            <img class="overflow-square-img" src="<?php echo $overflow_squares_right_image; ?>" alt="" />
         </div>
     </div>
 </div>
@@ -23,6 +30,8 @@
     a {
         text-decoration: none;
         color: inherit;
+        width: 100%;
+        height: 100%;
     }
 
     .overflow-square-bg {
