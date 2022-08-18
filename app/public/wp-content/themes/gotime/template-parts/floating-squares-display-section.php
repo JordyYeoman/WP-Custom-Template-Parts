@@ -4,7 +4,7 @@ $floating_squares_main_paragraph_text = get_field('floating_squares_main_paragra
 $floating_squares_shop_link = get_field('floating_squares_shop_link');
 $floating_squares_main_feature_image = get_field('floating_squares_main_feature_image');
 $floating_squares_small_top_right_image = get_field('floating_squares_small_top_right_image');
-$floating_squares_small_bottom_right_image_copy = get_field('floating_squares_small_bottom_right_image_copy');
+$floating_squares_small_bottom_right_image = get_field('floating_squares_small_bottom_right_image');
 ?>
 <div class="floating-squares-container">
     <div class="basic">
@@ -22,7 +22,7 @@ $floating_squares_small_bottom_right_image_copy = get_field('floating_squares_sm
             <img class="secondary-image" src="<?php echo $floating_squares_small_top_right_image; ?>" alt="" />
         </div>
         <div class="square hidden-on-mobile">
-            <img class="secondary-image" src="<?php echo $floating_squares_small_bottom_right_image_copy; ?>" alt="" />
+            <img class="secondary-image" src="<?php echo $floating_squares_small_bottom_right_image; ?>" alt="" />
         </div>
     </div>
 </div>
